@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{pgf}
+\usepackage{pgfpages}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage[normalem]{ulem}
+\usepackage{soul}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{extarrows}
+\usepackage{graphicx}
+
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{0.5pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+\begin{document}
+
+\begin{table}
+ 			\centering
+\begin{tabular}{p{pagewidth/3}p{pagewidth/3}p{pagewidth/3}}
+%row no:1
+\multicolumn{1}{p{pagewidth/3}}{Year of Publication /Publisher} & 
+\multicolumn{1}{p{pagewidth/3}}{Methodology used} & 
+\multicolumn{1}{p{pagewidth/3}}{Conclusion } \\
+\hhline{~~~~~}
+%row no:2 
+\multicolumn{1}{p{pagewidth/3}}{} & 
+\multicolumn{1}{p{pagewidth/3}}{} & 
+\multicolumn{1}{p{pagewidth/3}}{} \\
+\hhline{~~~~~}
+
+
+\end{tabular}
+ \end{table}
+
+\end{document}
